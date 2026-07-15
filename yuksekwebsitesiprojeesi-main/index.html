@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="YUKARI Kreatif Ajans — Marka stratejisi, görsel kimlik, dijital deneyim ve sanatsal prodüksiyon alanında yaratıcı çözümler sunuyoruz.">
+    <meta name="keywords" content="kreatif ajans, marka kimliği, dijital tasarım, sanatsal prodüksiyon, İstanbul, YUKARI">
+    <meta name="author" content="YUKARI Ajans">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="YUKARI — Kreatif Ajans">
+    <meta property="og:description" content="Marka stratejisi, görsel kimlik ve dijital deneyim alanında yaratıcı çözümler.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="assets/images/yukari-logo.png">
+
+    <title>YUKARI — Kreatif Ajans</title>
+
+    <!-- Stil -->
+    <link rel="stylesheet" href="css/style.css?v=50">
+
+    <!-- Favicon (inline SVG) -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' font-weight='bold'>Y</text></svg>">
+</head>
+<body>
+
+    <!-- SVG Filter (Liquid Glass Kırılma Efekti) -->
+    <svg width="0" height="0" style="position: absolute;">
+        <defs>
+            <filter id="glass-distortion" x="0%" y="0%" width="100%" height="100%">
+                <feTurbulence 
+                    type="fractalNoise" 
+                    baseFrequency="0.013 0.013"
+                    numOctaves="2" 
+                    seed="92" 
+                    result="noise" 
+                />
+                <feGaussianBlur 
+                    in="noise" 
+                    stdDeviation="2" 
+                    result="blurred" 
+                />
+                <feDisplacementMap 
+                    in="SourceGraphic" 
+                    in2="blurred" 
+                    scale="106"
+                    xChannelSelector="R" 
+                    yChannelSelector="G" 
+                />
+            </filter>
+        </defs>
+    </svg>
+
+    <!-- Inline SVG Mask — hidden div içinde ki text sızmasın -->
+    <div style="position: absolute; width: 0; height: 0; overflow: hidden; visibility: hidden;">
+    <svg width="0" height="0">
+        <defs>
+            <mask id="hero-text-mask">
+                <rect x="0" y="0" width="100%" height="100%" fill="black" />
+                <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" font-family="'Arial Nova', Arial, 'Helvetica Neue', sans-serif" font-weight="900" font-size="clamp(2rem, 5vw, 6rem)" fill="white" letter-spacing="-0.02em">Sorunlarınızı Çözüyoruz.</text>
+            </mask>
+        </defs>
+    </svg>
+    </div>
+
+
+
+    <!-- ========== Liquid Glass Background ========== -->
+    <div class="liquid-glass-bg" aria-hidden="true"></div>
+
+    <!-- ========== Header Content ========== -->
+    <header class="header-content" id="header" role="banner">
+        
+        <!-- Content styling based on user's card-content -->
+        <div class="card-content">
+            <a href="#" class="header__logo" aria-label="YUKARI Ana Sayfa">
+                <img src="assets/images/yeni-logo.svg" alt="YUKARI Logo" class="header__logo-img">
+            </a>
+
+            <!-- Mobil Menü Butonu -->
+            <button class="header__menu-toggle" aria-label="Menüyü aç/kapat" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="header__nav" id="main-nav" role="navigation" aria-label="Ana navigasyon">
+                <a href="#gallery" class="nav-link" id="nav-islerimiz">İşlerimiz</a>
+                <a href="#contact" class="nav-link" id="nav-iletisim">İletişim</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ========== Hero Bölümü ========== -->
+    <main>
+        <section class="hero" id="hero" aria-label="Hero alanı">
+            <!-- ========== Hero Video Background ========== -->
+            <video class="hero__video-bg" autoplay loop muted playsinline>
+                <source src="assets/videos/arkaplan-video-full.mp4" type="video/mp4">
+            </video>
+
+            <div class="hero__content">
+                <!-- Arka plan sıvısı (Sadece harflerin şeklinde kırpılmış Liquid Glass) -->
+                <div class="hero__glass-knockout-layer"></div>
+                <!-- Sadece metnin görünür olduğu ve videoyu tersine çeviren katman -->
+                <svg class="hero__glass-difference-layer" width="100%" height="100%">
+                    <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" font-family="'Arial Nova', Arial, 'Helvetica Neue', sans-serif" font-weight="900" font-size="clamp(2rem, 5vw, 6rem)" fill="#DFFFFF" stroke="rgba(255,255,255,0.2)" stroke-width="1" letter-spacing="-0.02em">Sorunlarınızı Çözüyoruz.</text>
+                </svg>
+            </div>
+
+        </section>
+
+        <!-- ========== İçerik Wrapper (Hero sonrası yukarı açılma efekti) ========== -->
+        <div class="content-reveal-wrapper" id="content-reveal">
+
+
+        <!-- ========== Proje Galerisi ========== -->
+        <section class="section gallery" id="gallery" aria-label="Projelerimiz">
+
+            <div class="gallery__grid">
+                <div style="width: 624px; height: 351px; background-color: #FF0000; transform: translateY(-52.5%);"></div>
+            </div>
+        </section>
+
+        <!-- ========== Footer ========== -->
+        <footer class="footer" id="contact" role="contentinfo">
+            <div class="footer__content">
+                <div class="footer__brand">
+                    <a href="#" class="footer__logo" aria-label="YUKARI Ana Sayfa">
+                        <img src="assets/images/yeni-logo.svg" alt="YUKARI Logo" class="footer__logo-img">
+                    </a>
+                    <p class="footer__desc">
+                        Markaları bir üst seviyeye taşıyan kreatif ajans. Strateji, tasarım ve 
+                        teknolojinin kesişiminde etkileyici deneyimler yaratıyoruz.
+                    </p>
+                </div>
+
+                <div class="footer__links">
+                    <div class="footer__link-group">
+                        <h4>Navigasyon</h4>
+                        <ul>
+                            <li><a href="#hero">Ana Sayfa</a></li>
+                            <li><a href="#gallery">İşlerimiz</a></li>
+                            <li><a href="#about">Hakkımızda</a></li>
+                            <li><a href="#contact">İletişim</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__link-group">
+                        <h4>İletişim</h4>
+                        <ul>
+                            <li><a href="mailto:hello@yukari.co">hello@yukari.co</a></li>
+                            <li><a href="tel:+902121234567">+90 212 123 45 67</a></li>
+                            <li><a>İstanbul, Türkiye</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <p class="footer__copyright">&copy; 2026 YUKARI Ajans. Tüm hakları saklıdır.</p>
+                <div class="footer__social">
+                    <a href="#" aria-label="Instagram">Instagram</a>
+                    <a href="#" aria-label="Behance">Behance</a>
+                    <a href="#" aria-label="LinkedIn">LinkedIn</a>
+                </div>
+            </div>
+        </footer>
+
+        </div><!-- /.content-reveal-wrapper -->
+    </main>
+
+    <!-- JavaScript -->
+    <script src="js/main.js?v=50"></script>
+</body>
+</html>
